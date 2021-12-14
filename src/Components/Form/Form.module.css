@@ -1,0 +1,190 @@
+.input {
+  width: 295px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #e3e3e4;
+  box-sizing: border-box;
+  border-left: 4px solid #4066a5;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+
+  align-items: center;
+  text-align: center;
+}
+
+.inputTextarea {
+  border: none;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-indent: 15px;
+  color: #6a707b;
+  z-index: 0;
+  position: relative;
+
+  width: 100%;
+}
+.input:focus {
+  outline: none;
+}
+.inputTextarea:focus {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.input:focus,
+.input:hover {
+  box-shadow: 0px 30px 40px 0px #1318210f;
+}
+
+.arrowButton {
+  font-size: 26px;
+  color: #6a707b;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-right: 12px;
+
+  border: none;
+  background-color: transparent;
+}
+.arrowButton:disabled {
+  cursor: default;
+  color: red;
+}
+
+.emailError {
+  position: absolute;
+  color: red;
+  font-size: 0.8em;
+  margin-left: 20px;
+}
+.tosError {
+  position: absolute;
+  color: red;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+.heading {
+  color: #131821;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.subheading {
+  color: #6a707b;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/* TOS */
+
+.tosContainer {
+  margin-left: 20px;
+  margin-top: 21px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tosCheckboxLabel {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6a707b;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.tosCheckbox {
+  height: 26px;
+  width: 26px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #e3e3e4;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.tosCheckbox:checked {
+  background-color: #4066a5;
+  background-image: url("../../img/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tosLink {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  margin-left: 3px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1300px) {
+  .input {
+    width: 664px;
+    height: 70px;
+
+    margin-left: 100px;
+    margin-top: 48px;
+    align-items: center;
+    height: 70px;
+  }
+  .inputTextarea {
+    text-indent: 40px;
+  }
+  .arrowButton {
+    margin-right: 38px;
+    margin-left: 20px;
+  }
+
+  .emailError {
+    color: red;
+    margin-left: 100px;
+    font-size: 1.2em;
+  }
+  .tosError {
+    position: absolute;
+    color: red;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+
+  .headinContainer {
+    margin-left: 120px;
+    margin-top: 50px;
+  }
+  .heading {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .subheading {
+    width: 375px;
+    font-size: 16px;
+    margin-top: 17px;
+    line-height: 28px;
+  }
+  .tosContainer {
+    margin-top: 55px;
+    margin-left: 140px;
+  }
+}

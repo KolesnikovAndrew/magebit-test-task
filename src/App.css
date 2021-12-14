@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.backgroundImageContainer {
+  background-image: url("../src/img/backImage.png");
+  width: 375px;
+  height: 815px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: -280px 7px;
+  background-size: 855px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1299px) and (min-width: 380px) {
+  .backgroundImageContainer {
+    width: 100vw;
+    background-position: unset;
+    background-size: 200%;
+    height: 100vh;
+  }
+  .content {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .html,
+  body {
+    overflow-y: hidden;
+  }
+  .backgroundImageContainer {
+    width: 1240px;
+    height: 1080px;
+    background-size: cover;
+    background-position: unset;
+    grid-area: image;
+  }
+
+  .form {
+    grid-area: form;
+  }
+  .topBar {
+    grid-area: topBar;
+  }
+  .content {
+    display: grid;
+
+    grid-template-columns: auto;
+    grid-template-areas: "topBar image " "form image";
+    width: 1920px;
+    height: 1080px;
+  }
+}
